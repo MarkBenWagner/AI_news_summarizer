@@ -1,5 +1,5 @@
 import requests
-import newspaper3k
+from newspaper import Article
 
 response = requests.get('https://hacker-news.firebaseio.com/v0/topstories.json')
 datas = response.json()
@@ -27,3 +27,21 @@ for article in matching_articles:
     
                 
                 
+api_url = 'https://hacker-news.firebaseio.com/v0/item/46629474.json' 
+
+response = requests.get(api_url)
+story_data = response.json() 
+
+print(f"Cím: {story_data.get('title')}")
+print(f"Külső Link: {story_data.get('url')}")
+print("-" * 30)                
+             
+                
+article = Article(story_data['url'])
+article.download()
+article.parse()
+print(article.text)
+print(article.authors)
+print(article.publish_date)
+print(article.top_image)
+print(article.summary)
