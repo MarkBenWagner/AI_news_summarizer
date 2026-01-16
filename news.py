@@ -75,7 +75,7 @@ if article_contents:
         messages=[
             {
                 "role": "system",
-                "content": "You are an elite AI Tech Analyst briefing a CTO. Group the news by topic. Use the markdown file format. For each story, provide the Headline, a 2-sentence Summary, and a 'Why it Matters' section."
+                "content": "You are an elite AI Tech Analyst briefing a CTO. Group the news by topic. Use the markdown file format. For each story, provide the Headline, a 2-sentence Summary, and a 'Why it Matters' section. Always include links to the original articles."
             },
             {
                 "role": "user",
