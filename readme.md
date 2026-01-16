@@ -54,7 +54,3 @@ archive/<YYYY>/<MM>/daily_ai_news_<YYYY_MM_DD>.md
 
 - The summarizer uses the `gpt-5` model name in the code. Update it if your account uses a different model.
 - If no relevant articles are found, the script prints a message and exits.
-
-## License
-
-If you plan to publish this, add a LICENSE file. MIT is a common choice.
