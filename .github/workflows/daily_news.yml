@@ -33,9 +33,9 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --global user.name "MarkBenWagner"
-          git config --global user.email "wagnermarkbenjamin@gmail.com"
-          
-          git add archive/
-          
-          git diff --staged --quiet || (git commit -m "Add daily AI news summary [skip ci]" && git push)
+            git config --global user.name "MarkBenWagner"
+            git config --global user.email "wagnermarkbenjamin@gmail.com"
+
+            git add archive/
+
+            git diff --staged --quiet || (git commit -m "$(date -u +"%Y-%m-%d") - AI news summary" && git push)
