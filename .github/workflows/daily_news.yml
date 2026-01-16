@@ -29,12 +29,12 @@ jobs:
       - name: Run script
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: python main.py
+        run: python news.py
 
       - name: Commit and push changes
         run: |
-          git config --global user.name "AI News Bot"
-          git config --global user.email "bot@example.com"
+          git config --global user.name "MarkBenWagner"
+          git config --global user.email "wagnermarkbenjamin@gmail.com"
           
           git add archive/
           
